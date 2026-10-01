@@ -110,3 +110,5 @@ plt.show()
 # %%
 print("Summary Statistics for Likes and Retweets:")
 display(df[['Likes', 'Retweets']].describe())
+
+# End of EDA and Preprocessing notebook script
