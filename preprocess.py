@@ -1,7 +1,16 @@
+"""
+preprocess.py
+-------------
+Utility script for cleaning and preprocessing the social media sentiment dataset.
+Loads raw CSV data, cleans text fields, handles missing values,
+and saves the processed output for downstream analysis.
+"""
+
 import pandas as pd
 import re
 
 def clean_text(text):
+    """Clean a single text string by lowercasing, removing URLs, punctuation, and extra whitespace."""
     if not isinstance(text, str):
         return text
     # Convert to lowercase
@@ -15,6 +24,7 @@ def clean_text(text):
     return text
 
 def preprocess_data(input_file, output_file):
+    """Load, clean, and save the sentiment dataset from input_file to output_file."""
     print(f"Loading data from {input_file}...")
     df = pd.read_csv(input_file)
     
